@@ -2,7 +2,7 @@
 ABOUT THE PROJECT:
 This project predicts the estimated medical treatment cost based on patient details like age, BMI, number of children, smoking status, etc.
 I built this project to understand how regression models work in real-world healthcare cost estimation.
-
+  
 WHAT I DID:
 Loaded and explored the medical cost dataset
 Cleaned the data and handled categorical variables
