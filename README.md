@@ -1,5 +1,5 @@
-AI MEDICAL COST PREDICTION SYSTEM
-ABOUT THE PROJECT
+                                                                                  AI MEDICAL COST PREDICTION SYSTEM
+ABOUT THE PROJECT:
 This project predicts the estimated medical treatment cost based on patient details like age, BMI, number of children, smoking status, etc.
 I built this project to understand how regression models work in real-world healthcare cost estimation.
 
@@ -11,14 +11,14 @@ Trained a regression model
 Evaluated model performance using R² score
 Built a simple Streamlit web interface to make predictions interactive
 
-TECHNOLOGIES USED
+TECHNOLOGIES USED:
 Python
 Pandas
 NumPy
 Scikit-learn
 Streamlit
 
-MODEL PERFORMANCE
+MODEL PERFORMANCE:
 The model was evaluated on test data and achieved a high R² score, showing strong prediction capability.
 
 Clone the repository:
