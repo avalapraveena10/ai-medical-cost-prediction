@@ -1,43 +1,66 @@
-                                                                                  AI MEDICAL COST PREDICTION SYSTEM
-ABOUT THE PROJECT:
-This project predicts the estimated medical treatment cost based on patient details like age, BMI, number of children, smoking status, etc.
-I built this project to understand how regression models work in real-world healthcare cost estimation.
-  
-WHAT I DID:
-Loaded and explored the medical cost dataset
-Cleaned the data and handled categorical variables
-Split the data into training and testing sets
-Trained a regression model
-Evaluated model performance using R² score
-Built a simple Streamlit web interface to make predictions interactive
 
-TECHNOLOGIES USED:
+###  AI Medical Cost Prediction System ###
+
+
+### About the Project
+
+This project predicts estimated medical insurance costs based on patient information such as age, BMI, smoking status, number of children, and region. It uses a Machine Learning regression model and provides predictions through a simple Streamlit web application.
+
+### Features:
+
+Predicts medical insurance costs
+Interactive Streamlit web interface
+Data preprocessing and feature encoding
+Machine Learning regression model
+Real-time cost prediction
+
+
+### Tech Stack
 Python
 Pandas
 NumPy
 Scikit-learn
 Streamlit
 
-MODEL PERFORMANCE:
-The model was evaluated on test data and achieved a high R² score, showing strong prediction capability.
 
-Clone the repository:
+### Project Workflow
+Load and preprocess the dataset
+Handle categorical variables
+Split data into training and testing sets
+Train the regression model
+Evaluate model performance
+Predict medical costs using Streamlit
+
+### Model Performance
+
+The regression model achieved a strong R² Score on the test dataset, demonstrating good prediction accuracy.
+
+ ### Installation
 git clone https://github.com/ramakumari1/ai-medical-cost-prediction
 cd ai-medical-cost-prediction
 pip install -r requirements.txt
 streamlit run app.py
 
-EXAMPLE PREDICTION
-Input:
-Age: 45
-BMI: 30
-Smoker: Yes
-The system predicts the estimated medical cost based on learned patterns from the dataset.
 
-WHAT I LEARNED
-Through this project, I improved my understanding of:
+### Example Prediction:
+Input	Value
+Age	45
+BMI	30
+Smoker	Yes
+
+Output: Estimated Medical Insurance Cost
+
+### What I Learned:
+
 Data preprocessing
-Regression models
+Feature engineering
+Regression algorithms
 Model evaluation
-Building simple ML web apps
+Building Machine Learning web applications using Streamlit
 
+
+### Future Enhancements
+Deploy the application online
+Support multiple regression models
+Improve prediction accuracy using hyperparameter tuning
+Add data visualization dashboard
