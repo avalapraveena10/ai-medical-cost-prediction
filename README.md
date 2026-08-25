@@ -1,66 +1,192 @@
-
-###  AI Medical Cost Prediction System ###
-
-
-### About the Project
-
-This project predicts estimated medical insurance costs based on patient information such as age, BMI, smoking status, number of children, and region. It uses a Machine Learning regression model and provides predictions through a simple Streamlit web application.
-
-### Features:
-
-Predicts medical insurance costs
-Interactive Streamlit web interface
-Data preprocessing and feature encoding
-Machine Learning regression model
-Real-time cost prediction
+###### &#x20;**AI-Based Pre-Treatment Medical Cost Prediction System**
 
 
-### Tech Stack
-Python
-Pandas
-NumPy
-Scikit-learn
-Streamlit
+
+###### &#x20;Project Overview
 
 
-### Project Workflow
-Load and preprocess the dataset
-Handle categorical variables
-Split data into training and testing sets
-Train the regression model
-Evaluate model performance
-Predict medical costs using Streamlit
 
-### Model Performance
-
-The regression model achieved a strong R² Score on the test dataset, demonstrating good prediction accuracy.
-
- ### Installation
-git clone https://github.com/ramakumari1/ai-medical-cost-prediction
-cd ai-medical-cost-prediction
-pip install -r requirements.txt
-streamlit run app.py
+The **AI-Based Pre-Treatment Medical Cost Prediction System** is a Machine Learning application that predicts the estimated cost of medical treatment based on patient and treatment-related information.
 
 
-### Example Prediction:
-Input	Value
-Age	45
-BMI	30
-Smoker	Yes
 
-Output: Estimated Medical Insurance Cost
-
-### What I Learned:
-
-Data preprocessing
-Feature engineering
-Regression algorithms
-Model evaluation
-Building Machine Learning web applications using Streamlit
+The system uses a **Random Forest Regression** model and provides an interactive **Streamlit web application** where users can enter patient details and receive an estimated pre-treatment cost.
 
 
-### Future Enhancements
-Deploy the application online
-Support multiple regression models
-Improve prediction accuracy using hyperparameter tuning
-Add data visualization dashboard
+
+&#x20;**Problem Statement**
+
+
+
+Medical treatment costs can vary significantly depending on factors such as disease, treatment type, patient age, smoking status, gender, region, and hospital type.
+
+
+
+This project aims to provide an estimated treatment cost before treatment begins by analyzing these factors using a Machine Learning regression model.
+
+
+
+**Note:**The prediction is an estimate generated from the project's dataset and should not be considered an actual medical or financial quotation.
+
+
+
+&#x20;**Features**
+
+
+
+\- Predicts estimated pre-treatment medical costs
+
+\- Interactive Streamlit web interface
+
+\- Disease-based treatment selection
+
+\- Handles categorical variables using one-hot encoding
+
+\- Converts smoking status into numerical values
+
+\- Random Forest Regression model
+
+\- Model evaluation using R² Score and Mean Absolute Error
+
+\- Trained model saved using Python Pickle
+
+\- Git LFS used for the large trained model file
+
+
+
+&#x20;**Machine Learning Model**
+
+
+
+The project uses:
+
+
+
+###### **Random Forest Regressor**
+
+
+
+Model configuration:
+
+
+
+\- Number of estimators: 300
+
+\- Maximum depth: 15
+
+\- Random state: 42
+
+\- Test size: 20%
+
+
+
+###### **Data Preprocessing**
+
+
+
+The following preprocessing steps are performed:
+
+
+
+1\. Smoking status is converted into numerical values:
+
+&#x20;  - Yes → 1
+
+&#x20;  - No → 0
+
+
+
+2\. One-hot encoding is applied to:
+
+&#x20;  - Disease
+
+&#x20;  - Treatment
+
+&#x20;  - Region
+
+&#x20;  - Hospital Type
+
+&#x20;  - Gender
+
+
+
+3\. The dataset is divided into:
+
+&#x20;  - 80% training data
+
+&#x20;  - 20% testing data
+
+
+
+###### 📊 **Model Performance**
+
+
+
+The model was evaluated on **800 test samples**.
+
+
+
+| Metric                 | Result |
+
+|------------------------|------: |
+
+| Training Samples       | 3,200  |
+
+| Testing Samples        | 800    |
+
+| Features After Encoding| 29     |
+
+| R² Score               | 0.99684|
+
+| Mean Absolute Error    |₹9,778.91|
+
+
+
+The R² score of **0.99684** indicates that the model explains approximately **99.68%** of the variance in the target values on this particular test split.
+
+
+
+The MAE of approximately **₹9,779** represents the average absolute difference between predicted and actual costs on the test set.
+
+
+
+> **Important:**These results are based on this project's dataset and test split. They should not be interpreted as real-world medical cost accuracy.
+
+
+
+###### &#x20;**Streamlit Application**
+
+
+
+The application collects the following inputs:
+
+
+
+\- Disease
+
+\- Treatment
+
+\- Region
+
+\- Hospital Type
+
+\- Smoking Status
+
+\- Age
+
+\- Gender
+
+
+
+After clicking **Predict Treatment Cost**, the trained Random Forest model generates an estimated pre-treatment cost.
+
+
+
+Example output:
+
+
+
+text
+
+Estimated Pre-Treatment Cost: ₹ 394,704
+
